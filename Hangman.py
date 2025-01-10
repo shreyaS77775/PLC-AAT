@@ -1,7 +1,8 @@
 #Hangman Game in Python
 import random
 
-words = ()
+words = ("elephant", "guitar","delicious", "puzzle","calendar", 
+         "mountain", "paradise", "keyboard", "chocolate", "treasure")
 hangman_art = {
 	0:"",
 	1:"",
