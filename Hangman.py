@@ -49,14 +49,14 @@ def main():
     while is_running:
         display_man(wrong_guesses)
         display_hint(hint)
-        guess = input("Enter a letter: ").lower()
+        guess = input("\nEnter a letter: ").lower()
         
         if len(guess) != 1 or not guess.isalpha():
-            print("Invalid input")
+            print("\nInvalid input\n")
             continue
 
         if guess in guessed_letters:
-            print(f"{guess} is already guessed.")
+            print(f"\n{guess} is already guessed.\n")
             continue
 
         guessed_letters.add(guess)
@@ -71,15 +71,15 @@ def main():
         if '_' not in hint:
             display_man(wrong_guesses)
             display_answer(answer)
-            print("YOU WIN!!")
+            print("\nYOU WIN!!\n")
             is_running = False
         elif wrong_guesses >= len(hangman_art) - 1:
             display_man(wrong_guesses)
             display_answer(answer)
-            print("YOU LOSE")
+            print("\nYOU LOSE!!\n")
             is_running = False
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
-    
+        
 
